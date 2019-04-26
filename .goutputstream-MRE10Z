@@ -1,0 +1,32 @@
+#!/usr/local/rvm/rubies/ruby-2.6.0/bin/ruby
+
+
+require './read_ini.rb'
+require './info.rb'
+
+
+
+
+  
+  Read_ini.Read_all
+
+# Database filename
+  Info.db_init( './data.db' )
+
+=begin  result = db_name.execute <<-SQL
+    CREATE TABLE numbers (
+      name VARCHAR(30),
+      val INT
+  ) 
+  SQL
+  
+=end
+=begin
+  {'one' => 1, 'two' => 2}.each do |data|
+    db_name.execute 'insert into numbers values( ?, ? )', data
+  end
+=end
+  n = Ttable.new( db_name, 'Table1' )
+  n1 = Ttable.new( db_name, '3456');
+  n.print( '2019-04-25', '08:53:49', 3.14, 1.2, 0.75)
+

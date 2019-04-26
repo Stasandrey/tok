@@ -29,11 +29,13 @@ long_line_column=80
 
 [files]
 current_page=0
-FILE_NAME_0=704;Ruby;0;EUTF-8;1;1;0;%2Froot%2Fwork%2Ftok.rb;0;4
+FILE_NAME_0=388;Ruby;0;EUTF-8;1;1;0;%2Froot%2Fwork%2Ftok.rb;0;4
 FILE_NAME_1=104;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fwork%2FREADME.md;0;4
-FILE_NAME_2=150;Conf;0;EUTF-8;0;1;0;%2Froot%2Fwork%2Fconf.ini;0;2
-FILE_NAME_3=193;Ruby;0;EUTF-8;0;1;0;%2Froot%2Fwork%2Fread_ini.rb;0;2
-FILE_NAME_4=223;Ruby;0;EUTF-8;0;1;0;%2Froot%2Fwork%2Finfo.rb;0;2
+FILE_NAME_2=119;Conf;0;EUTF-8;0;1;0;%2Froot%2Fwork%2Fconf.ini;0;2
+FILE_NAME_3=632;Ruby;0;EUTF-8;0;1;0;%2Froot%2Fwork%2Fread_ini.rb;0;2
+FILE_NAME_4=360;Ruby;0;EUTF-8;0;1;0;%2Froot%2Fwork%2Finfo.rb;0;2
+FILE_NAME_5=537;Ruby;0;EUTF-8;0;1;0;%2Froot%2Fwork%2Fpribor.rb;0;2
+FILE_NAME_6=12;Ruby;0;EUTF-8;0;1;0;%2Froot%2Fwork%2Fcom.rb;0;2
 
 [VTE]
 last_dir=/root
