@@ -19,26 +19,27 @@ class Device
   end
 
   def tick
-    if @now==0 then 
-      @now = @time
+#    if @now==0 then 
+#      @now = @time
       read
 #      puts @now
-    else 
-      @now = @now - 1
+#    else 
+#      @now = @now - 1
 #      puts @now   
-    end
+#    end
     
   end
   
   def read
 #    puts "Tick for #{@name}"
     s = read_com
-    puts s
-    puts s[ 0, 8 ]
-    puts s[ 9, 8 ]
-    puts s[ 18, 12]
-    @data.print( s[ 0, 8 ], s[ 9, 8 ], s[ 18,12 ].to_i, 0, 0 )
-  
+    if s.size == 28 then
+      puts s
+      puts s[ 0, 8 ]
+      puts s[ 9, 8 ]
+      puts s[ 18, 12]
+      @data.print( s[ 0, 8 ], s[ 9, 8 ], s[ 18,12 ].to_i, 0, 0 )
+    end
   
   
   end

@@ -10,6 +10,7 @@ def read_com
   parity = SerialPort::EVEN
 
   sp = SerialPort.new( port_str, baud_rate, data_bits, stop_bits, parity)
+  sp.read_timeout = 10000
 #Protokol for ce301
 #puts "Port opened"
 #Connecting
@@ -33,9 +34,12 @@ def read_com
      0x45, 0x5F, 0x28, 0x29, 0x03, 0x56 ) 
   sp.write(s)
   s = sp.readline( 23 )
-  s = s[ 10, 8 ]
+  if s!=nil then 
+    s = s[ 10, 8 ]
+    res = s
+  end
 #  puts( "Date->[#{s}]")
-  res = s
+  
 #puts "Date read"
 #read time
   s = sprintf( "%c%c%c%c%c%c%c%c%c%c%c%c%c", 
@@ -43,9 +47,11 @@ def read_com
      0x45, 0x5F, 0x28, 0x29, 0x03, 0x67 ) 
   sp.write(s)
   s = sp.readline( 20 )
-  s = s[ 9, 8 ]
+  if s != nil then
+    s = s[ 9, 8 ]
 #  puts( "Time->[#{s}]")
-  res = res + '|'+s
+    res = res + '|'+s
+  end
 #puts "Time read"
 #read pokazaniya
   s = sprintf( "%c%c%c%c%c%c%c%c%c%c%c%c%c", 
@@ -53,9 +59,11 @@ def read_com
      0x50, 0x45, 0x28, 0x29, 0x03, 0x37 ) 
   sp.write(s)
   s = sp.readline( 20 )
-  s = s[ 9,10 ]
+  if s!=nil then
+    s = s[ 9,10 ]
 #  puts( "Pokazaniya->[#{s}]")
-  res = res + '|'+s
+    res = res + '|'+s
+  end
 #puts "Pok read"
 #disconnect
   s = sprintf( "%c%c%c%c%c", 0x01, 0x42, 0x30, 0x03, 0x75 ) 

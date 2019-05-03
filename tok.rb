@@ -26,13 +26,13 @@ include Com
   
 #Main circle
 
-  while true do
+#  while true do
     pribory.each { |p|
 	  p.tick
 		
 	}      
-    sleep(1)
-  end
+ 
+#  end
     
  
   
